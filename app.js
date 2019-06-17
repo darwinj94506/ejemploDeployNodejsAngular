@@ -10,26 +10,28 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(__dirname + '/client/dist/client'));
-
+app.set('views', path.join(__dirname, 'views'));
+// app.use(express.static(__dirname + '/client/dist/client'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
+app.use('/',express.static('client/dist/client',{redirect:false}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 app.get('/*', function(req,res) {
-    res.sendFile(__dirname+'/client/dist/client/index.html');
-});
+    // res.sendFile(__dirname+'client/dist/client/index.html');
+    res.sendFile(path.resolve('client/dist/client/index.html'));
+  });
 
 // error handler
 app.use(function(err, req, res, next) {
