@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url:'https://safe-beach-86279.herokuapp.com/api/'
 };
