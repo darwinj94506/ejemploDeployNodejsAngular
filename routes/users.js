@@ -5,7 +5,7 @@ var db = require('./../bdd.coneccion');
 /* GET users listing. */
 router.get('/getdatos', function(req, res, next) {
   // res.send('respond with a resource');
-  db.any('select * from test_table')
+  db.any('select * from usuarios')
         .then(function(data) {
             console.log(data);
             res.status(200)
