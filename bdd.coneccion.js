@@ -39,7 +39,7 @@ const connectionString = "postgres://postgres:root@localhost:5432/mundiboxdb_v2"
 // console.log("times:"+process.env.TIMES);
 
 // console.log("database_url:"+process.env.DATABASE_URL);
-// var pgp = require('pg-promise')(options);
+var pgp = require('pg-promise')(options);
 
 // var connectionString = {
 //     connectionString:process.env.DATABASE_URL,
