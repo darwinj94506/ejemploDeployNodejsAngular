@@ -36,20 +36,20 @@ var connectionString =  "postgres://webadmin:RAMydg13977@node45590-env-0992479.j
 LA QUE SI VALE LOCALMENTE
 const connectionString = "postgres://postgres:root@localhost:5432/mundiboxdb_v2";
 */ 
-console.log("times:"+process.env.TIMES);
+// console.log("times:"+process.env.TIMES);
 
-console.log("database_url:"+process.env.DATABASE_URL);
-var pgp = require('pg-promise')(options);
+// console.log("database_url:"+process.env.DATABASE_URL);
+// var pgp = require('pg-promise')(options);
 
-var connectionString = {
-    connectionString:process.env.DATABASE_URL,
-    ssl: true
-}
-
-
+// var connectionString = {
+//     connectionString:process.env.DATABASE_URL,
+//     ssl: true
+// }
 
 
-var db = pgp(connectionString);
+
+
+// var db = pgp(connectionString);
 
 module.exports = db;
 
