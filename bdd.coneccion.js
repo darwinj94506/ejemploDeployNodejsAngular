@@ -1,15 +1,15 @@
-var promise = require('bluebird');
-var options = {
-  promiseLib: promise,
-  error: function (error, e) {
-    if (e.cn) {
-        // A connection-related error;
-        console.log("CN:", e.cn);
-        console.log("EVENT:", error.message);
-        console.log(error)
-    }
-  }
-};
+// var promise = require('bluebird');
+// var options = {
+//   promiseLib: promise,
+//   error: function (error, e) {
+//     if (e.cn) {
+//         // A connection-related error;
+//         console.log("CN:", e.cn);
+//         console.log("EVENT:", error.message);
+//         console.log(error)
+//     }
+//   }
+// };
 
 
 /*
@@ -51,5 +51,5 @@ const connectionString = "postgres://postgres:root@localhost:5432/mundiboxdb_v2"
 
 // var db = pgp(connectionString);
 
-module.exports = db;
+// module.exports = db;
 
