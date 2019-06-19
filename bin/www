@@ -24,20 +24,25 @@ var db = require('./../bdd.coneccion');
 /**
  * Listen on provided port, on all network interfaces.
  */
-db.connect()
-    .then(function(obj) {
-        obj.done(); // success, release connection;
-        server.listen(port, () => {
-            console.log('Coneccion a la BDD inventario exitosa, El servidor escucha en el puerto:' + port)
-        });
-        server.on('error', onError);
-        server.on('listening', onListening);
+// db.connect()
+//     .then(function(obj) {
+//         obj.done();
+//         server.listen(port, () => {
+//             console.log('Coneccion a la BDD inventario exitosa, El servidor escucha en el puerto:' + port)
+//         });
+//         server.on('error', onError);
+//         server.on('listening', onListening);
 
 
-    })
-    .catch(function(error) {
-        console.log("ERROR en la coneccion a la base de datos:", error);
-    });
+//     })
+//     .catch(function(error) {
+//         console.log("ERROR en la coneccion a la base de datos:", error);
+//     });
+server.listen(port, () => {
+    console.log('Coneccion a la BDD inventario exitosa, El servidor escucha en el puerto:' + port)
+});
+server.on('error', onError);
+server.on('listening', onListening);
 
 
 
