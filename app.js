@@ -22,12 +22,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter); 
 app.use('/api', usersRouter);
+//este estaba
 app.use('/',express.static('client/dist/client',{redirect:false}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+// este estaba
 app.get('/*', function(req,res) {
     // res.sendFile(__dirname+'client/dist/client/index.html');
     res.sendFile(path.resolve('client/dist/client/index.html'));
