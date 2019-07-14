@@ -45,14 +45,22 @@ var pgp = require('pg-promise')(options);
 //     connectionString:process.env.DATABASE_URL,
 //     ssl: true
 // }
-
+//la que si funciono 
 const connectionString = {
-  host: 'node45978-env-3420417.jl.serv.net.mx',
+  host: 'node46991-env-1117355.jl.serv.net.mx',
   port: 5432,
   database: 'mundibox',
   user: 'webadmin',
-  password: 'OVMphv11799'
+  password: 'RKLllc95761'
 }; 
+
+// const connectionString = {
+//   host: 'node45978-env-3420417.jl.serv.net.mx',
+//   port: 5432,
+//   database: 'mundibox',
+//   user: 'webadmin',
+//   password: 'OVMphv11799'
+// }; 
 
 
 
